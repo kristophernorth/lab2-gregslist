@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 
 
-const HouseSchema = new Schema(
+export const HouseSchema = new Schema(
     {
         bedrooms: { type: Number, min: 0, max: 30, required: true },
         bathrooms: { tpe: Number, min: 0, max: 25, required: true },
