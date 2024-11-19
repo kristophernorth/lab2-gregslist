@@ -4,7 +4,7 @@ import { dbContext } from "../db/DbContext"
 class HousesService {
 
   async getHouses(houseQuery) {
-    const houses = await dbContext.Houses.find()
+    const houses = await dbContext.Houses.find(houseQuery).populate('creator')
     return houses
   }
 

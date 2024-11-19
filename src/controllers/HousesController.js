@@ -29,4 +29,13 @@ export class HousesController extends BaseController {
       next(error)
     }
   }
+
+  // async getHousesByQuery(request, response, next) {
+  // try {
+
+  // } catch (error) {
+
+  // }
+  // }
+
 }
