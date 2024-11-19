@@ -12,7 +12,8 @@ export class HousesController extends BaseController {
 
   async getHouses(request, response, next) {
     try {
-      const houses = await housesService.getHouses
+      const houseQuery = request.query
+      const houses = await housesService.getHouses(houseQuery)
       response.send(houses)
     } catch (error) {
       next(error)
@@ -21,8 +22,8 @@ export class HousesController extends BaseController {
 
   async getHouseById(request, response, next) {
     try {
-      const houseID = request.params.houseId
-      const house = await housesService.getHouseById(houseID)
+      const houseId = request.params.houseId
+      const house = await housesService.getHouseById(houseId)
       response.send(house)
     } catch (error) {
       next(error)
